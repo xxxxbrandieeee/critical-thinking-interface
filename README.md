@@ -1,3 +1,7 @@
+<p align="left">
+  <img src="AI_CT_cover/cover_1.jpg" width="600" alt="Study interface">
+</p>
+
 # Interface
 
 This repository contains the study interface code for the experiment in the paper *["Investigating the Effects of LLM Use on Critical Thinking Under Time Constraints: Access Timing and Time Availability"](https://doi.org/10.1145/3772318.3791796)*. The interface is used for studying (1) how AI use under different access timing and time availability conditions affects critical thinking task performance and (2) how people use AI during critical thinking tasks. The critical thinking task asks participants to make a reasoned written decision based on a decision-making scenario and a set of documents of varying characteristics. The main task interface has three components: a document viewer, an LLM chatbot (if applicable for the experimental condition), and a text editor. It controls the access timing of the LLM chatbot and the time availability for task completion, enabling experiments within a two-dimensional time constraint space. After the task, participants sequentially restate their decision, complete a free recall assessment, evaluate document characteristics, and answer comprehension questions.
@@ -107,22 +111,40 @@ export let CURRENT_PROJECT_VARIANT: ProjectVariant = 'random';
  
 ## Backend (`backend/`)
  
+The backend proxies LLM chat requests to the OpenAI API and stores participant response data as JSON files.
+ 
 ### Endpoints
  
 | Endpoint | Method | Description |
 |----------|--------|-------------|
 | `/api/response` | POST | Saves participant response data as a timestamped JSON file |
-| `/api/chat` | POST | Chat requests to the GPT-4o API |
+| `/api/chat` | POST | Proxies chat requests to the OpenAI API (GPT-4 Turbo) |
+ 
+To use a different LLM provider, modify the `/api/chat` endpoint in `backend/server.js`.
  
 ### Data Storage
  
 Participant responses are saved as timestamped JSON files under `backend/`, in subdirectories named after the configuration variant (e.g., `no-access-sufficient/`, `early-access-insufficient/`). These files are the raw input for the data processing pipeline — see the [data dictionary](https://github.com/xxxxbrandieeee/critical-thinking-data-dictionary).
  
 ---
- 
+
 ## Setup and Deployment
  
-### Frontend
+### 1. Clone this repository
+ 
+```bash
+git clone https://github.com/xxxxbrandieeee/critical-thinking-interface
+```
+ 
+### 2. Add your API key
+ 
+The backend proxies LLM chat requests to the OpenAI API. Open `backend/server.js` and replace the placeholder API key with your own:
+ 
+```js
+const OPENAI_API_KEY = ""; // Add your own API key here
+```
+ 
+### 3. Run the frontend
  
 **Local machine**
 ```bash
@@ -138,10 +160,10 @@ cd critical-thinking-ai-time-constraints
 npm install
 npm run build
 ```
- 
+
 Upload the generated `dist/` folder to your server and configure Nginx to serve it and bind your domain.
  
-### Backend
+### 4. Run the backend
  
 **Local machine**
 ```bash
@@ -161,6 +183,7 @@ npm run pm2
 ```
  
 This starts the server with PM2 for process management, auto-restart, and log rotation. Logs are written to `logs/out.log` and `logs/err.log`. Note that some files in the `backend/` directory are generated during local development and can be ignored when uploading to the server.
+
 
 ---
 
