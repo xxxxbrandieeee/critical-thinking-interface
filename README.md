@@ -1,4 +1,4 @@
-<div align="center">
+<div align="left">
 
 <img src="AI_CT_cover/cover_1.png" width="500px"/>
 
