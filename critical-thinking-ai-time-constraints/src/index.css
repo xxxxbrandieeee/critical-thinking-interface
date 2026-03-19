@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; 
+}
+
+
+div::-webkit-scrollbar { 
+	/* Hide default scrollbar */
+	-webkit-appearance: none;
+}
+div::-webkit-scrollbar:vertical { 
+	/* Set vertical scrollbar width */
+	width: 7px;
+}
+
+
+div::-webkit-scrollbar-thumb { 
+	/* Custom scrollbar thumb style - must be defined, otherwise the scrollbar will be transparent */
+	border-radius: 10px; 
+	border: 2px solid rgba(255,255,255,.4); 
+	background-color: rgba(0, 0, 0, .5);
+}

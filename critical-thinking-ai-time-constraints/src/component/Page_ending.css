@@ -1,0 +1,10 @@
+.Page_ending_content {
+    display: flex;
+    border-radius: 8px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 70%;
+    overflow: auto;
+    align-items: center;
+}

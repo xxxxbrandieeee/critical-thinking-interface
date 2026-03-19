@@ -1,0 +1,36 @@
+.div_des {
+    width: 80%;
+    margin: 20px auto 0;
+    display: block;
+    padding: 10px 10px 10px 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+.content {
+    display: block;
+    background: white;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 70%;
+    height: 70vh;
+    overflow: auto;
+}
+
+.select{
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 70%;
+}
+
+.title {
+    text-align: center;
+    color: #333;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}

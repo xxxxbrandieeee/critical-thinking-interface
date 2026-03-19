@@ -1,0 +1,23 @@
+.Page_feedback_content {
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    padding-bottom: 100px;
+}
+
+.input{
+    margin-left: 0px;
+    width: 100%;
+}
+
+.Page_feedback_item {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 500px;
+    font-size: 16px;
+    width: 100%;
+}
+

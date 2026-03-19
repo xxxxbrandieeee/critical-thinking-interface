@@ -1,0 +1,23 @@
+.Page_scenario_content {
+    margin: auto;
+    padding: 20px;
+    width: 70%;
+    height: 95vh;
+    overflow: hidden;
+}
+.Page_scenario_text_content{
+    height: 100%;
+    overflow: auto;
+    padding: 0 20px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+h2{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.custom_indent {
+    padding-left: 30px;
+  }
+  
