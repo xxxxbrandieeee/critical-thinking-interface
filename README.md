@@ -1,5 +1,5 @@
-<p align="left">
-  <img src="AI_CT_cover/cover_2.png" width="600" alt="Study interface">
+<p align="center">
+  <img src="AI_CT_cover/cover_1.png" width="600" alt="Study interface">
 </p>
 
 # Interface
