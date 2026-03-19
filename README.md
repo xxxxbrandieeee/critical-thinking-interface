@@ -1,8 +1,10 @@
-<p align="center">
-  <img src="AI_CT_cover/cover_1.png" width="400" alt="Study interface">
-</p>
+<div align="center">
+
+<img src="AI_CT_cover/cover_1.png" width="350px"/>
 
 **Interface for Examing the Effects of AI Use on Critical Thinking**
+
+</div>
 
 # Interface
 
