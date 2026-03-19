@@ -1,21 +1,31 @@
 <div align="center">
 
-<img src="AI_CT_cover/cover_1.png" width="350px"/>
+<img src="AI_CT_cover/cover_1.png" width="500px"/>
 
-**Interface for Examing the Effects of AI Use on Critical Thinking**
+**Interface for Examining the Effects of AI Use on Critical Thinking**
 
 </div>
 
-# Interface
+# Overview
 
 This repository contains the study interface code for the experiment in the paper *["Investigating the Effects of LLM Use on Critical Thinking Under Time Constraints: Access Timing and Time Availability"](https://doi.org/10.1145/3772318.3791796)*. The interface is used for studying (1) how AI use under different access timing and time availability conditions affects critical thinking task performance and (2) how people use AI during critical thinking tasks. The critical thinking task asks participants to make a reasoned written decision based on a decision-making scenario and a set of documents of varying characteristics. The main task interface has three components: a document viewer, an LLM chatbot (if applicable for the experimental condition), and a text editor. It controls the access timing of the LLM chatbot and the time availability for task completion, enabling experiments within a two-dimensional time constraint space. After the task, participants sequentially restate their decision, complete a free recall assessment, evaluate document characteristics, and answer comprehension questions.
+- For a summary of the paper, please visit our [project website](https://criticalthinking-ai.app/).
  
-**What it logs:** The interface captures keystroke, cursor, and navigation events across all panels, enabling analysis of how participants move between reading, using the LLM, and writing throughout the task. These raw logs yield behavioral metrics at different granularities — see the [data dictionary](https://github.com/xxxxbrandieeee/critical-thinking-data-dictionary).
+**What it logs:** The interface captures keystroke, cursor, and navigation events across all panels, enabling analysis of how participants move between reading, using the LLM, and writing throughout the task. These raw logs yield behavioral metrics at different granularities: 
+— Data dictionary: [critical-thinking-data-dictionary](https://github.com/xxxxbrandieeee/critical-thinking-data-dictionary).
  
 **For reuse:**
 - The interface can support human-centered experiments on AI's impact on critical thinking and other cognitive tasks involving a non-linear process of reading and writing. Researchers can replace the task scenario and documents, and revise or skip the post-task questions.
 - Researchers can select from eight pre-set configurations in a two-dimensional time constraint space (4 LLM access timing levels × 2 time availability levels), which can be used individually or randomly assigned per participant. Alternatively, researchers can use the two base versions (with or without the LLM) without any time constraints.
- 
+
+---
+
+## Contents
+
+- [Frontend](#frontend-critical-thinking-ai-time-constraints)
+- [Backend](#backend-backend)
+- [Setup and Deployment](#setup-and-deployment)
+
 ---
  
 ## Repository Structure
